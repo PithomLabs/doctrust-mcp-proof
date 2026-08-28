@@ -1,0 +1,23 @@
+# Local DocTrust checkout — cloned by setup.sh, never committed
+/doctrust/
+
+# Built binaries
+/bin/
+*.exe
+*.test
+*.out
+
+# Runtime-generated evidence and logs
+/evidence/
+
+# Go workspace files
+go.work
+go.work.sum
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/

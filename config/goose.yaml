@@ -1,0 +1,27 @@
+# Goose MCP extension configuration for DocTrust.
+# Verified against Goose v1.48.0 config format.
+#
+# Config location: ~/.config/goose/config.yaml
+# This file is a template — run-goose.sh generates a working copy with resolved paths.
+#
+# Key differences from Claude Desktop config:
+#   - Uses "extensions" key (not "mcpServers")
+#   - Uses "cmd" (not "command")
+#   - Uses "envs" (map) + "env_keys" (list) (not "env")
+
+extensions:
+  doctrust:
+    name: doctrust
+    type: stdio
+    cmd: "${DOCTRUST_BIN}"
+    args:
+      - "--domain"
+      - "shipment_release"
+      - "--snapshot-root"
+      - "${DOCTRUST_SNAPSHOT_ROOT}"
+      - "--rulesets-dir"
+      - "${DOCTRUST_RULESETS_DIR}"
+    enabled: true
+    timeout: 300
+    envs: {}
+    env_keys: []
